@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'EurostileBold';
+	src: url('EurostileBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'EurostileExtended';
+	src: url('EurostileExtended.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'EurostileOblique';
+	src: url('EurostileOblique.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'EuroStyleNormal';
+	src: url('EuroStyleNormal.woff') format('woff');
+}

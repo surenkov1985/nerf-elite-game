@@ -1,9 +1,10 @@
 import { Game } from "./Game";
 import { Tools } from "../system/Tools";
+import {Menu} from "./Menu";
 
 export const Config = {
-    loader: Tools.massiveRequire(require["context"]('./../../sprites/', true, /\.(mp3|png|jpe?g)$/)),
     scenes: {
-        "Game": Game
+        "Game": Game,
+        "Menu": Menu
     }
 };

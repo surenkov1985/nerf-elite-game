@@ -14,7 +14,7 @@ class GameApplication extends EventEmitter {
         this.config = config;
 
         this.app = new Application();
-        await this.app.init({ width: 960, height: 540});
+        await this.app.init({ resizeTo: window });
         document.body.appendChild(this.app.canvas);
 
         this.scenes = new ScenesManager();
@@ -23,6 +23,8 @@ class GameApplication extends EventEmitter {
 
         this.loader = new Loader(this.app.loader, this.config);
         this.loader.preload().then(assets => this.start(assets));
+
+        // this.resize()
     }
 
     sprite(key) {
@@ -31,7 +33,14 @@ class GameApplication extends EventEmitter {
 
     start(assets) {
         this.assets = assets;
-        this.scenes.start("Game");
+        this.scenes.start("Menu");
+    }
+
+    resize(){
+        window.addEventListener('resize',  () => {
+            console.log(this)
+            this.app.renderer.resize(window.innerWidth, window.innerHeight)
+        })
     }
 }
 
