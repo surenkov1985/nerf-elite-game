@@ -9,15 +9,17 @@ export class Button extends Scene {
 		super();
 		this.textContent = text
 		this.variant = variant
+		console.log(this)
 	}
 
 	create() {
-		this.render()
+		this.renderButton()
 
 	}
 
-	render(){
+	renderButton(){
 
+		console.log(this)
 		console.log(this.variant)
 		const bgType = this.variant === 'primary' ? 'blue_btn' : 'orange_btn'
 		this.bg = App.sprite(bgType)
@@ -28,7 +30,6 @@ export class Button extends Scene {
 			}
 		})
 		this.text.text = "dffd"
-		// this.text.x = 500
 		this.container.addChild(this.bg)
 		this.container.addChild(this.text)
 		this.container.height = 55
